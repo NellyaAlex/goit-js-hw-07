@@ -1,6 +1,6 @@
-const nameInput = document.getElementById('name-input');
+const nameInput = document.querySelector('#name-input');
 console.log(nameInput);
-const nameOutput = document.getElementById('name-output');
+const nameOutput = document.querySelector('#name-output');
 console.log(nameOutput);
 
 nameInput.addEventListener('input', () => {
