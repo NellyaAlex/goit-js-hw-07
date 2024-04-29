@@ -10,7 +10,7 @@ const destroyButton = document.getElementById('controls').querySelector('button[
 const boxesContainer = document.getElementById('boxes');
 
 function createBoxes(amount) {
-  boxesContainer.innerHTML = ''; // Очистити попередні елементи
+  boxesContainer.innerHTML = '';
   let width = 30;
   let height = 30;
 
@@ -19,23 +19,23 @@ function createBoxes(amount) {
     box.style.width = `${width}px`;
     box.style.height = `${height}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesContainer.appendChild(box);
+    boxesContainer.append(box);
     width += 10;
     height += 10;
   }
 }
 
 function destroyBoxes() {
-  boxesContainer.innerHTML = ''; // Очистити контейнер
+  boxesContainer.innerHTML = '';
 }
 
 createButton.addEventListener('click', () => {
   const count = parseInt(inputCount.value);
   if (isNaN(count) || count < 1 || count > 100) {
-    return; // Пропустити недійсне значення
+    return;
   }
   createBoxes(count);
-  inputCount.value = ''; // Очистити значення input
+  inputCount.value = '';
 });
 
 destroyButton.addEventListener('click', destroyBoxes);
