@@ -28,6 +28,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
+  const boxesContainer = document.getElementById('boxes');
   boxesContainer.innerHTML = '';
 }
 
